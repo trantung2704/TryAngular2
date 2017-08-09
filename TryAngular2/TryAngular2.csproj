@@ -285,7 +285,12 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\authors.component.ts" />
+    <TypeScriptCompile Include="app\courses.component.ts" />
+    <TypeScriptCompile Include="app\Directives\autoGrow.directive.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\Services\authors.service.ts" />
+    <TypeScriptCompile Include="app\Services\courses.service.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

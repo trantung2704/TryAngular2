@@ -1,0 +1,15 @@
+- key concept of angular 2:
+
+1.  Component (View Component): 
+- Include data, view and behaviour of the view. 
+- Need one root component but in real world may have alot of components
+- = class in typedscript 
+2. Service: 
+- Data access/ loging
+3. Routing
+4. Directive
+
+
+- ngFor change # to let
+
+- component should not include any logic but view logic
