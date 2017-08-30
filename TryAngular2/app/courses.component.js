@@ -14,12 +14,17 @@ var courses_service_1 = require("./Services/courses.service");
 var CoursesComponent = (function () {
     function CoursesComponent(courseService) {
         this.title = "the title of courses page";
+        this.isActive = true;
+        this.imageUrl = 'http://www.kawasaki.co.th/uploads/products/z300/kw-z300_grn2.jpg';
         this.courses = courseService.getCourses();
     }
+    CoursesComponent.prototype.onClick = function ($event) {
+        console.log("click", $event);
+    };
     CoursesComponent = __decorate([
         core_1.Component({
             selector: 'courses',
-            template: "<h2>Courses</h2>\n                {{title}}\n                <input type=\"text\" autoGrow/>\n                <ul><li *ngFor=\"let course of courses\">{{course}}</li></ul>\n                ",
+            template: "<h2>Courses</h2>\n                {{title}}\n                <input type=\"text\" autoGrow/>\n                <button class=\"btn btn-primary\" \n                    [class.active]=\"isActive\"  \n                    [style.background-color]=\"isActive? 'red':'blue'\"\n                    on-click=\"onClick($event)\">test</button>\n                <input type=\"text\" [(ngModel)]=\"title\"/>\n                <ul><li *ngFor=\"let course of courses\">{{course}}</li></ul>\n                ",
             providers: [courses_service_1.CoursesService]
         }),
         __metadata("design:paramtypes", [courses_service_1.CoursesService])

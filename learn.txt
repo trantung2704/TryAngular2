@@ -13,3 +13,11 @@
 - ngFor change # to let
 
 - component should not include any logic but view logic
+
+- property binding is one way from model to dom
+
+-binding in angular 2 following Mosh:
++ property binding
++ class binding
++ style binding
++ 
