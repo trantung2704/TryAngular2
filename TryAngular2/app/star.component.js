@@ -7,24 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var StarComponent = (function () {
+    function StarComponent() {
+        this.isActive = true;
     }
-    AppComponent.prototype.onUpdated = function ($event) {
-        console.log($event.message);
-        alert($event.message);
+    StarComponent.prototype.onClick = function () {
+        this.isActive = !this.isActive;
     };
-    AppComponent = __decorate([
+    StarComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<h1>Hello {{name}}</h1>' +
-                '<courses>Loading...</courses>' +
-                '<authors>Loading...</authors>' +
-                '<star [isFavorite]="false" (updated)="onUpdated($event)">Loading...</star>',
+            selector: 'star',
+            template: "\n                <i class=\"glyphicon\" [class.glyphicon-star]=\"isActive\" [class.glyphicon-star-empty]=\"!isActive\" (click)=\"onClick()\">\n                ",
+            providers: []
         })
-    ], AppComponent);
-    return AppComponent;
+    ], StarComponent);
+    return StarComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.StarComponent = StarComponent;
+//# sourceMappingURL=star.component.js.map

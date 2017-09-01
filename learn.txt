@@ -17,7 +17,14 @@
 - property binding is one way from model to dom
 
 -binding in angular 2 following Mosh:
-+ property binding
-+ class binding
-+ style binding
-+ 
++ property binding []
++ class binding []
++ style binding []
++ event binding ()
++ two way binding [()]
+
+- can define input and event listener (= $broadcast and $emit in angular 1)
+
+- can define template by url and it would be load for the first time then cached
+
+- can define css by attribute or url then it will not affect other component template
